@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+# Auther: Kitazawa
+# ExecuteFormat: ./getirc [IP|DOMAIN] [date]"
+
+USER=kitazawa
+FILEPATH=~/Documents/tmp/irc-$(date "+%Y%m%d").txt
+
+if [ $# == 0 ]; then
+	echo "Error: Usage: ./getirc [IP|DOMAIN] [date]"
+	exit 1
+elif [ $# == 1 ]; then
+	DATE=7
+else
+	expr $2 + 1 >> /dev/null 2>&1 
+	if [ $? != 0 ];then
+		echo "Error: Usage: ./getirc [IP|DOMAIN] [date]"
+		exit 1
+	fi
+	DATE=$2
+fi
+DOMAIN=$1
+COMMAND="irconcat -s $(expr $(date "+%Y%m%d") - $DATE)"
+
+ssh $USER@$DOMAIN $COMMAND > $FILEPATH
+
+exit 0
