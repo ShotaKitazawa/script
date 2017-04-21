@@ -1,24 +1,11 @@
-# About
+# imgcat
 
-PATH 環境変数にここを追加すると使いやすいかもしれません。
+download from [https://raw.githubusercontent.com/gnachman/iTerm2/master/tests/imgcat]
 
-## getirc
-接続先サーバにて irconcat を実行し、その結果をファイルに保存します。
+# checksec
 
-```sh:getirc
-getirc [IP|DOMAIN] [DATE]
-```
+download from [https://github.com/slimm609/checksec.sh]
 
-## imgcat
-iterm2 を使っている場合、端末に画像を出力します。
+# Other
 
-```sh:imgcat
-imgcat [画像ファイル]
-```
-
-## setup
-色々なソフトウェアをインストールします。
-
-```sh:setup
-setup
-```
+自作

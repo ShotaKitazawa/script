@@ -78,7 +78,7 @@ if [ "$(uname)" == 'Darwin' ]; then
 
 	# vim + lua
 	brew_install lua
-	if [ $? == 0 ]; then brew reinstall vim --with-lua > /dev/null 2>&1; fi
+	if [ $? == 0 ]; then brew reinstall vim --with-lua -enable-interp=python,python3,ruby > /dev/null 2>&1; fi
 	brew_install clang-format
 
 	# pyenv
