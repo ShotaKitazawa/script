@@ -6,6 +6,10 @@
 USER=kitazawa
 FILEPATH=~/Documents/tmp/irc-$(date "+%Y%m%d").txt
 
+if [ ! -d $(dirname $FILEPATH) ]; then
+	mkdir $(dirname $FILEPATH) -p
+fi
+
 if [ $# == 0 ]; then
 	echo "Error: Usage: ./getirc [IP|DOMAIN] [date]"
 	exit 1
@@ -26,5 +30,6 @@ DOMAIN=$1
 COMMAND="irconcat -s $(expr $(date "+%Y%m%d") - $DATE)"
 
 ssh $USER@$DOMAIN $COMMAND > $FILEPATH
+echo "success: create at $FILEPATH"
 
 exit 0
