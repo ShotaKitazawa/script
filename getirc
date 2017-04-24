@@ -19,6 +19,9 @@ else
 	fi
 	DATE=$2
 fi
+if [ ! -f ~/Documents/tmp ]; then
+	mkdir -p ~/Documents/tmp
+fi
 DOMAIN=$1
 COMMAND="irconcat -s $(expr $(date "+%Y%m%d") - $DATE)"
 
