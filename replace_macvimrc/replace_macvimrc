@@ -1,0 +1,2 @@
+mv /Applications/MacVim.app/Contents/Resources/vim/vimrc{,.default}
+mv /Applications/MacVim.app/Contents/Resources/vim/gvimrc{,.default}

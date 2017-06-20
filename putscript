@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# Auther: Kitazawa
+
+for i in $(ls ~/script/ | grep -v $0); do ln -s ~/script/$i/$i ~/bin; done

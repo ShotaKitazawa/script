@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $(nkf -g $1) == "Shift_JIS" ]; then
+  nkf -w --overwrite $1
+else
+  echo "$1: This file isn't Shift_JIS. Can't convert to UTF-8."
+fi
